@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //check for NSUserDefaults for login here.  If nil then I can launch the login screen.
     // Do any additional setup after loading the view, typically from a nib.
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F7313CB1A6326A900F4CD23 /* LoginScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7313CA1A6326A900F4CD23 /* LoginScreen.m */; };
 		8FBB5FC81A623EE000EAFCEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB5FC71A623EE000EAFCEC /* main.m */; };
 		8FBB5FCB1A623EE000EAFCEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB5FCA1A623EE000EAFCEC /* AppDelegate.m */; };
 		8FBB5FCE1A623EE000EAFCEC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB5FCD1A623EE000EAFCEC /* FirstViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F7313C91A6326A900F4CD23 /* LoginScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreen.h; sourceTree = "<group>"; };
+		8F7313CA1A6326A900F4CD23 /* LoginScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginScreen.m; sourceTree = "<group>"; };
 		8FBB5FC21A623EE000EAFCEC /* CareRingProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareRingProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBB5FC61A623EE000EAFCEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FBB5FC71A623EE000EAFCEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				8FBB5FCF1A623EE000EAFCEC /* SecondViewController.h */,
 				8FBB5FD01A623EE000EAFCEC /* SecondViewController.m */,
 				8FBB5FD21A623EE000EAFCEC /* Main.storyboard */,
+				8F7313C91A6326A900F4CD23 /* LoginScreen.h */,
+				8F7313CA1A6326A900F4CD23 /* LoginScreen.m */,
 				8FBB5FEE1A62423D00EAFCEC /* ProfileViewController.h */,
 				8FBB5FEF1A62423D00EAFCEC /* ProfileViewController.m */,
 				8FBB5FD51A623EE000EAFCEC /* Images.xcassets */,
@@ -242,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FBB5FD11A623EE000EAFCEC /* SecondViewController.m in Sources */,
+				8F7313CB1A6326A900F4CD23 /* LoginScreen.m in Sources */,
 				8FBB5FCB1A623EE000EAFCEC /* AppDelegate.m in Sources */,
 				8FBB5FCE1A623EE000EAFCEC /* FirstViewController.m in Sources */,
 				8FBB5FC81A623EE000EAFCEC /* main.m in Sources */,
@@ -436,6 +442,7 @@
 				8FBB5FEA1A623EE000EAFCEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FBB5FEB1A623EE000EAFCEC /* Build configuration list for PBXNativeTarget "CareRingProfileTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +451,7 @@
 				8FBB5FED1A623EE000EAFCEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

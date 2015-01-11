@@ -32,6 +32,8 @@
     } else {
         //error
     }
+    
+    //create a class that is my httpconnection class.  move the NSUrl and delegates to that class.  when data comes in the delegate can send out a global notification.  I need to add this to the app delegate.  this will be similar to local chat application
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
@@ -105,6 +107,7 @@
     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:22.0];
     cell.backgroundColor = [UIColor colorWithRed:0.29 green:0.53 blue:0.91 alpha:1.0];
     cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:18.0];
+
 
     if(indexPath.row == 0){
       //cell.imageView.image = [UIImage imageNamed:@"apple.png"];
