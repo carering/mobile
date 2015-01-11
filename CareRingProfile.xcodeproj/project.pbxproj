@@ -15,6 +15,8 @@
 		8FBB5FD61A623EE000EAFCEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBB5FD51A623EE000EAFCEC /* Images.xcassets */; };
 		8FBB5FD91A623EE000EAFCEC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBB5FD71A623EE000EAFCEC /* LaunchScreen.xib */; };
 		8FBB5FE51A623EE000EAFCEC /* CareRingProfileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB5FE41A623EE000EAFCEC /* CareRingProfileTests.m */; };
+		8FBB5FF01A62423D00EAFCEC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB5FEF1A62423D00EAFCEC /* ProfileViewController.m */; };
+		8FBB5FF21A6250C800EAFCEC /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBB5FF11A6250C800EAFCEC /* apple.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		8FBB5FDE1A623EE000EAFCEC /* CareRingProfileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareRingProfileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBB5FE31A623EE000EAFCEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FBB5FE41A623EE000EAFCEC /* CareRingProfileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CareRingProfileTests.m; sourceTree = "<group>"; };
+		8FBB5FEE1A62423D00EAFCEC /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		8FBB5FEF1A62423D00EAFCEC /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		8FBB5FF11A6250C800EAFCEC /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,7 @@
 		8FBB5FC41A623EE000EAFCEC /* CareRingProfile */ = {
 			isa = PBXGroup;
 			children = (
+				8FBB5FF31A6250CF00EAFCEC /* Images */,
 				8FBB5FC91A623EE000EAFCEC /* AppDelegate.h */,
 				8FBB5FCA1A623EE000EAFCEC /* AppDelegate.m */,
 				8FBB5FCC1A623EE000EAFCEC /* FirstViewController.h */,
@@ -91,6 +97,8 @@
 				8FBB5FCF1A623EE000EAFCEC /* SecondViewController.h */,
 				8FBB5FD01A623EE000EAFCEC /* SecondViewController.m */,
 				8FBB5FD21A623EE000EAFCEC /* Main.storyboard */,
+				8FBB5FEE1A62423D00EAFCEC /* ProfileViewController.h */,
+				8FBB5FEF1A62423D00EAFCEC /* ProfileViewController.m */,
 				8FBB5FD51A623EE000EAFCEC /* Images.xcassets */,
 				8FBB5FD71A623EE000EAFCEC /* LaunchScreen.xib */,
 				8FBB5FC51A623EE000EAFCEC /* Supporting Files */,
@@ -122,6 +130,14 @@
 				8FBB5FE31A623EE000EAFCEC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FBB5FF31A6250CF00EAFCEC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8FBB5FF11A6250C800EAFCEC /* apple.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +222,7 @@
 			files = (
 				8FBB5FD41A623EE000EAFCEC /* Main.storyboard in Resources */,
 				8FBB5FD91A623EE000EAFCEC /* LaunchScreen.xib in Resources */,
+				8FBB5FF21A6250C800EAFCEC /* apple.png in Resources */,
 				8FBB5FD61A623EE000EAFCEC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +245,7 @@
 				8FBB5FCB1A623EE000EAFCEC /* AppDelegate.m in Sources */,
 				8FBB5FCE1A623EE000EAFCEC /* FirstViewController.m in Sources */,
 				8FBB5FC81A623EE000EAFCEC /* main.m in Sources */,
+				8FBB5FF01A62423D00EAFCEC /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
