@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RegistrationViewController.h"
 
 @interface LoginScreen : UIViewController <UITextFieldDelegate>
 
@@ -14,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *registrationButton;
 
 @end

@@ -27,8 +27,6 @@
             NSLog(@"Login Screen Loaded");
         }];
     
-        NSLog(@"Where am I?");
-    
     return YES;
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8F7313CB1A6326A900F4CD23 /* LoginScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7313CA1A6326A900F4CD23 /* LoginScreen.m */; };
+		8FA4D8811A63766100352220 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA4D8801A63766100352220 /* RegistrationViewController.m */; };
+		8FA4D8831A63855400352220 /* rings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA4D8821A63855400352220 /* rings.png */; };
 		8FBB5FC81A623EE000EAFCEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB5FC71A623EE000EAFCEC /* main.m */; };
 		8FBB5FCB1A623EE000EAFCEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB5FCA1A623EE000EAFCEC /* AppDelegate.m */; };
 		8FBB5FCE1A623EE000EAFCEC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB5FCD1A623EE000EAFCEC /* FirstViewController.m */; };
@@ -33,6 +35,9 @@
 /* Begin PBXFileReference section */
 		8F7313C91A6326A900F4CD23 /* LoginScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreen.h; sourceTree = "<group>"; };
 		8F7313CA1A6326A900F4CD23 /* LoginScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginScreen.m; sourceTree = "<group>"; };
+		8FA4D87F1A63766100352220 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		8FA4D8801A63766100352220 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		8FA4D8821A63855400352220 /* rings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rings.png; sourceTree = "<group>"; };
 		8FBB5FC21A623EE000EAFCEC /* CareRingProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareRingProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBB5FC61A623EE000EAFCEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FBB5FC71A623EE000EAFCEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,6 +105,8 @@
 				8FBB5FCF1A623EE000EAFCEC /* SecondViewController.h */,
 				8FBB5FD01A623EE000EAFCEC /* SecondViewController.m */,
 				8FBB5FD21A623EE000EAFCEC /* Main.storyboard */,
+				8FA4D87F1A63766100352220 /* RegistrationViewController.h */,
+				8FA4D8801A63766100352220 /* RegistrationViewController.m */,
 				8F7313C91A6326A900F4CD23 /* LoginScreen.h */,
 				8F7313CA1A6326A900F4CD23 /* LoginScreen.m */,
 				8FBB5FEE1A62423D00EAFCEC /* ProfileViewController.h */,
@@ -140,6 +147,7 @@
 		8FBB5FF31A6250CF00EAFCEC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8FA4D8821A63855400352220 /* rings.png */,
 				8FBB5FF11A6250C800EAFCEC /* apple.png */,
 			);
 			name = Images;
@@ -228,6 +236,7 @@
 				8FBB5FD41A623EE000EAFCEC /* Main.storyboard in Resources */,
 				8FBB5FD91A623EE000EAFCEC /* LaunchScreen.xib in Resources */,
 				8FBB5FF21A6250C800EAFCEC /* apple.png in Resources */,
+				8FA4D8831A63855400352220 /* rings.png in Resources */,
 				8FBB5FD61A623EE000EAFCEC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +261,7 @@
 				8FBB5FCE1A623EE000EAFCEC /* FirstViewController.m in Sources */,
 				8FBB5FC81A623EE000EAFCEC /* main.m in Sources */,
 				8FBB5FF01A62423D00EAFCEC /* ProfileViewController.m in Sources */,
+				8FA4D8811A63766100352220 /* RegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
