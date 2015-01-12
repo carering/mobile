@@ -24,12 +24,34 @@
     
     //Add this gesture recognizer to our views list of recognizers.
     [self.view addGestureRecognizer:tap];
+    self.emailTextField.enablesReturnKeyAutomatically = YES;
+    self.emailTextField.text = nil;
+    self.passwordTextField.text = nil;
     
 }
 
 
 - (IBAction)loginButton:(id)sender {
-    [self dismissViewControllerAnimated:TRUE completion:nil];
+    NSLog(@"Email is %@", self.emailTextField.text);
+    
+    if([self.emailTextField.text isEqual:@""] || [self.passwordTextField.text isEqual:@""]){
+        //prompt to enter details
+        NSLog(@"must have both email and password!");
+    } else {
+        [self dismissViewControllerAnimated:TRUE completion:nil];
+        
+    }
+
+}
+- (IBAction)registrationButton:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    RegistrationViewController *registration = [storyboard instantiateViewControllerWithIdentifier:@"registrationView"];
+    [[[[UIApplication sharedApplication] windows] objectAtIndex:0] makeKeyAndVisible];
+    [self presentViewController:registration animated:TRUE completion:^{
+        
+    }];
+    
 }
 
 -(void)hideKeyboard {
@@ -51,6 +73,15 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
     [self hideKeyboard];
+}
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    NSLog(@"should begin");
+    if (textField == self.emailTextField) {
+        NSLog(@"yeeeeeppp!!!");
+
+    }
+    return TRUE;
 }
 
 
