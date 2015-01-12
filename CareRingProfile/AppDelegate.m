@@ -29,7 +29,7 @@
     
         NSLog(@"Where am I?");
     
-    return nil;
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

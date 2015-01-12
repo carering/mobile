@@ -25,7 +25,7 @@
     
     // Do any additional setup after loading the view.
     self.fields = [NSArray arrayWithObjects:@"Name",@"Email",@"Phone Number", @"Address",@"Brownies", nil];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://carering.herokuapp.com/profile/jstiehl@hobo.com"]];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://carering.herokuapp.com/profile/abby@carering.com"]];
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
     if(connection){
         //self.nameLabel.text = @"Connecting....";
