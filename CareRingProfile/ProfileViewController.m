@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "AppDelegate.h"
 
 @interface ProfileViewController ()
 
@@ -16,6 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    AppDelegate *myAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataReceived:) name:@"httpDataReceived" object:nil];
+    
+    
     self.view.backgroundColor = [UIColor colorWithRed:0.29 green:0.53 blue:0.91 alpha:1.0];
     self.profileTableView.scrollEnabled = NO;
     [self.profileTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -25,23 +31,17 @@
     
     // Do any additional setup after loading the view.
     self.fields = [NSArray arrayWithObjects:@"Name",@"Email",@"Phone Number", @"Address",@"Brownies", nil];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://carering.herokuapp.com/profile/abby@carering.com"]];
-    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
-    if(connection){
-        //self.nameLabel.text = @"Connecting....";
-    } else {
-        //error
-    }
     
-    //create a class that is my httpconnection class.  move the NSUrl and delegates to that class.  when data comes in the delegate can send out a global notification.  I need to add this to the app delegate.  this will be similar to local chat application
+    
+    [myAppDelegate.request httpRequest:@"http://carering.herokuapp.com/profile/11" requestMethod:nil reqData:nil];
+    
 }
 
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    //self.response = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+-(void)dataReceived: (NSNotification *)notification {
     
-    self.json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    
-    NSLog(@"%@", self.json);
+    self.json = [notification object];
+    NSLog(@"Data looks like %@",[notification object]);
     NSString *firstName = [self.json objectForKey:@"first_name"];
     NSString *lastName = [self.json objectForKey:@"last_name"];
     
@@ -51,20 +51,10 @@
     NSString *emailAddress = [self.json objectForKey:@"email"];
     NSString *phone = [self.json objectForKey:@"phone"];
     NSString *address = [self.json objectForKey:@"address"];
-//    NSString *brownies = [self.json objectForKey:@"brownies"];
     NSString *brownies = @"12";
-    
     self.profile = [NSArray arrayWithObjects:profileName, emailAddress,phone,address,brownies, nil];
-
+    
     [self.profileTableView reloadData];
-    
-    
-    //self.nameLabel.text = fullName;
-    
-}
-
--(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    NSLog(@"Server responded");
 }
 
 - (void)didReceiveMemoryWarning {

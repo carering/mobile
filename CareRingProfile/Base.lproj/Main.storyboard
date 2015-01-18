@@ -291,6 +291,12 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="confirmField" destination="xmn-Vv-AC5" id="2SZ-dK-6YY"/>
+                        <outlet property="emailField" destination="wWc-o2-yuD" id="Mg6-At-NeV"/>
+                        <outlet property="nameField" destination="JvI-1C-0xJ" id="cuW-zR-1MY"/>
+                        <outlet property="passwordField" destination="PYC-sj-O2L" id="BGc-ap-URS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoD-7I-tLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

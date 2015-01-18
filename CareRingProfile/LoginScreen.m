@@ -32,7 +32,6 @@
 
 
 - (IBAction)loginButton:(id)sender {
-    NSLog(@"Email is %@", self.emailTextField.text);
     
     if([self.emailTextField.text isEqual:@""] || [self.passwordTextField.text isEqual:@""]){
         //prompt to enter details
@@ -55,7 +54,7 @@
 }
 
 -(void)hideKeyboard {
-    NSLog(@"here");
+
    [self.emailTextField resignFirstResponder];
    [self.passwordTextField resignFirstResponder];
     //[self hideKeyboard];
@@ -64,7 +63,6 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self hideKeyboard];
-    NSLog(@"here also");
     
     //Needs a return value to know if a return should be inserted in the textfield.
     return NO;
