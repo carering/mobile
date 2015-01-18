@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F479F9E1A689A3B00B6958E /* HttpModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F479F9D1A689A3B00B6958E /* HttpModule.m */; };
 		8F7313CB1A6326A900F4CD23 /* LoginScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7313CA1A6326A900F4CD23 /* LoginScreen.m */; };
 		8FA4D8811A63766100352220 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA4D8801A63766100352220 /* RegistrationViewController.m */; };
 		8FA4D8831A63855400352220 /* rings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA4D8821A63855400352220 /* rings.png */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F479F9C1A689A3B00B6958E /* HttpModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpModule.h; sourceTree = "<group>"; };
+		8F479F9D1A689A3B00B6958E /* HttpModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpModule.m; sourceTree = "<group>"; };
 		8F7313C91A6326A900F4CD23 /* LoginScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreen.h; sourceTree = "<group>"; };
 		8F7313CA1A6326A900F4CD23 /* LoginScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginScreen.m; sourceTree = "<group>"; };
 		8FA4D87F1A63766100352220 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
@@ -76,6 +79,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F479F9F1A689B6C00B6958E /* http */ = {
+			isa = PBXGroup;
+			children = (
+				8F479F9C1A689A3B00B6958E /* HttpModule.h */,
+				8F479F9D1A689A3B00B6958E /* HttpModule.m */,
+			);
+			name = http;
+			sourceTree = "<group>";
+		};
+		8F479FA01A689F5800B6958E /* Tab Views */ = {
+			isa = PBXGroup;
+			children = (
+				8FBB5FCC1A623EE000EAFCEC /* FirstViewController.h */,
+				8FBB5FCD1A623EE000EAFCEC /* FirstViewController.m */,
+				8FBB5FCF1A623EE000EAFCEC /* SecondViewController.h */,
+				8FBB5FD01A623EE000EAFCEC /* SecondViewController.m */,
+				8FBB5FEE1A62423D00EAFCEC /* ProfileViewController.h */,
+				8FBB5FEF1A62423D00EAFCEC /* ProfileViewController.m */,
+			);
+			name = "Tab Views";
+			sourceTree = "<group>";
+		};
 		8FBB5FB91A623EE000EAFCEC = {
 			isa = PBXGroup;
 			children = (
@@ -100,17 +125,13 @@
 				8FBB5FF31A6250CF00EAFCEC /* Images */,
 				8FBB5FC91A623EE000EAFCEC /* AppDelegate.h */,
 				8FBB5FCA1A623EE000EAFCEC /* AppDelegate.m */,
-				8FBB5FCC1A623EE000EAFCEC /* FirstViewController.h */,
-				8FBB5FCD1A623EE000EAFCEC /* FirstViewController.m */,
-				8FBB5FCF1A623EE000EAFCEC /* SecondViewController.h */,
-				8FBB5FD01A623EE000EAFCEC /* SecondViewController.m */,
+				8F479FA01A689F5800B6958E /* Tab Views */,
 				8FBB5FD21A623EE000EAFCEC /* Main.storyboard */,
 				8FA4D87F1A63766100352220 /* RegistrationViewController.h */,
 				8FA4D8801A63766100352220 /* RegistrationViewController.m */,
+				8F479F9F1A689B6C00B6958E /* http */,
 				8F7313C91A6326A900F4CD23 /* LoginScreen.h */,
 				8F7313CA1A6326A900F4CD23 /* LoginScreen.m */,
-				8FBB5FEE1A62423D00EAFCEC /* ProfileViewController.h */,
-				8FBB5FEF1A62423D00EAFCEC /* ProfileViewController.m */,
 				8FBB5FD51A623EE000EAFCEC /* Images.xcassets */,
 				8FBB5FD71A623EE000EAFCEC /* LaunchScreen.xib */,
 				8FBB5FC51A623EE000EAFCEC /* Supporting Files */,
@@ -260,6 +281,7 @@
 				8FBB5FCB1A623EE000EAFCEC /* AppDelegate.m in Sources */,
 				8FBB5FCE1A623EE000EAFCEC /* FirstViewController.m in Sources */,
 				8FBB5FC81A623EE000EAFCEC /* main.m in Sources */,
+				8F479F9E1A689A3B00B6958E /* HttpModule.m in Sources */,
 				8FBB5FF01A62423D00EAFCEC /* ProfileViewController.m in Sources */,
 				8FA4D8811A63766100352220 /* RegistrationViewController.m in Sources */,
 			);

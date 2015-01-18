@@ -27,6 +27,7 @@
             NSLog(@"Login Screen Loaded");
         }];
     
+        self.request = [[HttpModule alloc] init];
     return YES;
 }
 

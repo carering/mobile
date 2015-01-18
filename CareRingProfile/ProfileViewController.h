@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@interface ProfileViewController : UIViewController <NSURLConnectionDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UITableView *profileTableView;
 @property NSDictionary *json;
 @property NSArray *fields;
