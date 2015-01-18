@@ -10,14 +10,23 @@
 
 @implementation HttpModule
 
--(void)httpRequest: (NSString *)path requestMethod:(NSString *)method {
+-(void)httpRequest: (NSString *)path requestMethod:(NSString *)method reqData:(NSData *)reqData {
     
     request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:path]];
-    
+    NSLog(@"%@", [NSJSONSerialization JSONObjectWithData:reqData options:NSJSONReadingMutableContainers error:nil]);
     if(method == nil){
        request.HTTPMethod = @"GET";
     } else {
       request.HTTPMethod = method;
+    }
+    
+    if(reqData == nil){
+        NSLog(@"No data!  Must be a get request!");
+        
+    } else {
+        NSLog(@"Setting request body");
+        [request setHTTPBody:reqData];
+        [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     }
     
     connection = [NSURLConnection connectionWithRequest:request delegate:self];
@@ -25,6 +34,7 @@
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
+    NSLog(@"Response received!");
     
 }
 

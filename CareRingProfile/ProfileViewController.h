@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UITableView *profileTableView;
-@property NSDictionary *json;
+@property (strong, nonatomic) NSDictionary *json;
 @property NSArray *fields;
 @property NSArray *profile;
 @property (weak, nonatomic) IBOutlet UILabel *profileLabel;

@@ -33,7 +33,7 @@
     self.fields = [NSArray arrayWithObjects:@"Name",@"Email",@"Phone Number", @"Address",@"Brownies", nil];
     
     
-    [myAppDelegate.request httpRequest:@"http://carering.herokuapp.com/profile/11" requestMethod:nil];
+    [myAppDelegate.request httpRequest:@"http://carering.herokuapp.com/profile/11" requestMethod:nil reqData:nil];
     
 }
 

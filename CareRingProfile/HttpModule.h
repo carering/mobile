@@ -14,5 +14,5 @@
     NSDictionary *json;
 }
 
--(void)httpRequest: (NSString *)path requestMethod:(NSString *)method;
+-(void)httpRequest: (NSString *)path requestMethod:(NSString *)method reqData:(NSData *)reqData;
 @end
