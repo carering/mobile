@@ -47,6 +47,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     RegistrationViewController *registration = [storyboard instantiateViewControllerWithIdentifier:@"registrationView"];
     [[[[UIApplication sharedApplication] windows] objectAtIndex:0] makeKeyAndVisible];
+    
     [self presentViewController:registration animated:TRUE completion:^{
         
     }];

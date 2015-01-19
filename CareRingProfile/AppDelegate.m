@@ -17,17 +17,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
     //look for NSUser defaults for first login. if not there return nil  create a bool called already logged in.  first time the app is run bool has not been created.  then the first screen needs to be loaded.
+    self.request = [[HttpModule alloc] init];
+   
+    self.user = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%ld", (long)[self.user integerForKey:@"uid"]);
     
+    if([self.user integerForKey:@"uid"] != 0){
+        
+    } else {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         LoginScreen *loginScreen = [storyboard instantiateViewControllerWithIdentifier:@"loginScreen"];
         [self.window makeKeyAndVisible];
         [self.window.rootViewController presentViewController:loginScreen animated:NO completion:^{
             NSLog(@"Login Screen Loaded");
         }];
+    }
     
-        self.request = [[HttpModule alloc] init];
+    
+
     return YES;
 }
 

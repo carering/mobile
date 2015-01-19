@@ -223,9 +223,11 @@
 				TargetAttributes = {
 					8FBB5FC11A623EE000EAFCEC = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = XCN9LL562N;
 					};
 					8FBB5FDD1A623EE000EAFCEC = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = XCN9LL562N;
 						TestTargetID = 8FBB5FC11A623EE000EAFCEC;
 					};
 				};
@@ -405,9 +407,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Stiehl (2P94M5T8C8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: James Stiehl (2P94M5T8C8)";
 				INFOPLIST_FILE = CareRingProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "087c9628-b7de-4bb8-9fd1-78c6eb52100f";
 			};
 			name = Debug;
 		};
@@ -415,9 +420,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Stiehl (2P94M5T8C8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: James Stiehl (2P94M5T8C8)";
 				INFOPLIST_FILE = CareRingProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "087c9628-b7de-4bb8-9fd1-78c6eb52100f";
 			};
 			name = Release;
 		};
@@ -425,6 +433,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -436,6 +446,7 @@
 				INFOPLIST_FILE = CareRingProfileTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareRingProfile.app/CareRingProfile";
 			};
 			name = Debug;
@@ -444,6 +455,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -451,6 +464,7 @@
 				INFOPLIST_FILE = CareRingProfileTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareRingProfile.app/CareRingProfile";
 			};
 			name = Release;

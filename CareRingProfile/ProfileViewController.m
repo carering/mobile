@@ -17,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSInteger uid = [user integerForKey:@"uid"];
+    NSLog(@"%ld", (long)uid);
+    
     AppDelegate *myAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataReceived:) name:@"httpDataReceived" object:nil];
@@ -31,9 +35,9 @@
     
     // Do any additional setup after loading the view.
     self.fields = [NSArray arrayWithObjects:@"Name",@"Email",@"Phone Number", @"Address",@"Brownies", nil];
-    
-    
-    [myAppDelegate.request httpRequest:@"http://carering.herokuapp.com/profile/11" requestMethod:nil reqData:nil];
+    //NSString *path = [NSString stringWithFormat:@"http://carering.herokuapp.com/profile/121"];
+    NSString *path = [NSString stringWithFormat:@"http://carering.herokuapp.com/profile/%ld",(long)uid];
+    [myAppDelegate.request httpRequest:path requestMethod:nil reqData:nil];
     
 }
 
@@ -41,7 +45,7 @@
 -(void)dataReceived: (NSNotification *)notification {
     
     self.json = [notification object];
-    NSLog(@"Data looks like %@",[notification object]);
+//    NSLog(@"Data looks like %@",[notification object]);
     NSString *firstName = [self.json objectForKey:@"first_name"];
     NSString *lastName = [self.json objectForKey:@"last_name"];
     

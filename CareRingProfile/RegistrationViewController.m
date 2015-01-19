@@ -7,7 +7,7 @@
 //
 
 #import "RegistrationViewController.h"
-#import "AppDelegate.h"
+
 
 @interface RegistrationViewController ()
 
@@ -43,35 +43,44 @@
     
     email = self.emailField.text;
     password = self.passwordField.text;
+    address = self.addressField.text;
+    phone = self.phoneField.text;
+    firstName = self.firstNameField.text;
+    lastName = self.lastNameField.text;
+    //Need to add some sort of validation to the text field entries add an alert if anything is blank?
     
-    json = [NSDictionary dictionaryWithObjectsAndKeys:email,@"email",password, @"password", @"James", @"firstName", @"Xcode", @"lastName", @"123 Street", @"address", @"555-555-5555", @"phone", nil];
+    json = [NSDictionary dictionaryWithObjectsAndKeys:email,@"email",password, @"password", firstName, @"firstName", lastName, @"lastName", address, @"address", phone, @"phone", nil];
     
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json
                                                            options:NSJSONWritingPrettyPrinted error:&error];
     
-    AppDelegate *myAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [myAppDelegate.request httpRequest:@"http://carering.herokuapp.com/register" requestMethod:@"POST" reqData:jsonData];
+    self.myAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [self.myAppDelegate.request httpRequest:@"http://carering.herokuapp.com/register" requestMethod:@"POST" reqData:jsonData];
     
 }
 
 
 -(void)dataReceived :(NSNotification *)notification{
-    
-    json = [notification userInfo];
+    json = [notification object];
     NSLog(@"%@", json);
-    
+    self.myAppDelegate.user = [NSUserDefaults standardUserDefaults];
+    NSInteger uid = [[json objectForKey:@"insertId"] integerValue];
+    [self.myAppDelegate.user setInteger:uid forKey:@"uid"];
+
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UITabBarController *firstView = [storyboard instantiateViewControllerWithIdentifier:@"ringsView"];
     [[[[UIApplication sharedApplication] windows] objectAtIndex:0] makeKeyAndVisible];
-    [self presentViewController:firstView animated:TRUE completion:^{
-        
-    }];
+    [[[[UIApplication sharedApplication] windows] objectAtIndex:0] setRootViewController:firstView];
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+//    [myAppDelegate.window.rootViewController presentViewController:firstView animated:FALSE completion:^{
+//        
+//    }];
     
 }
 
 - (IBAction)cancelButton:(id)sender {
-    [self dismissViewControllerAnimated:TRUE completion:nil];
+    [self dismissViewControllerAnimated:FALSE completion:nil];
 }
 
 -(void)hideKeyboard {
@@ -79,7 +88,11 @@
     [self.emailField resignFirstResponder];
     [self.passwordField resignFirstResponder];
     [self.confirmField resignFirstResponder];
-    [self.nameField resignFirstResponder];
+    [self.firstNameField resignFirstResponder];
+    [self.lastNameField resignFirstResponder];
+    [self.phoneField resignFirstResponder];
+    [self.addressField resignFirstResponder];
+    
     //[self hideKeyboard];
 }
 
